@@ -1,0 +1,681 @@
+@font-face {
+    font-family: 'iran_sans_bold';
+    src: url('../Fonts/iran_sans_bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_light';
+    src: url('../Fonts/iran_sans_light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_medi';
+    src: url('../Fonts/iran_sans_medi.woff') format('woff');
+}
+*{
+    font-family:iran_sans_light;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+html{
+    font-size: 60%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background:#007bff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+header.navbar div{
+    display: inline-block;
+}
+header .navbar a,div{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0 2rem;
+}
+header .navbar a:hover{
+    color: white;
+    padding: 10px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, .2);
+}
+header .icons a {
+    font-size: 2rem;
+    color: #000;
+    margin-left: 1rem;
+}
+header .icons a:hover{
+    color: white;
+    
+}
+#menu-bar{
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: .1rem solid #000;
+    color: #000;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+/*dropdown login*/
+.login-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.login-dropdown:hover .dropdown-content {
+    display: block;
+}
+.login-dropdown .dropdown-content form {
+    padding: 10px;
+}
+.login-dropdown .dropdown-content form input
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-dropdown .dropdown-content form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-dropdown .dropdown-content form button:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2), 0px -2px 2px rgba(0,0,0,0.2);
+}
+
+.login-dropdown .dropdown-content {
+    display: none;
+}
+/* end header  */
+section{
+    padding: 2rem 9%;
+}
+.home{
+    padding: 0;
+    position: relative;
+}
+.home .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+.home .slide-container .slide .content{
+    flex: 1 1 40rem;
+    animation: slideContent .3s linear 1s backwards;
+}
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
+.home .slide-container .slide .image{
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+    position: relative;
+    z-index: 0;
+}
+.home .slide-container .slide .image .shoe{
+    width: 100%;
+    transform: rotate(-10deg);
+    animation: shoe .3s linear;
+}
+@keyframes shoe{
+    0%{
+        transform: rotate(0deg) scale(.5);
+    }
+}
+.home .slide-container .slide .content span{
+    font-size: 2rem;
+    color: blue;
+    font-weight: bolder;
+}
+.home .slide-container .slide .content h3{
+    font-size: 5rem;
+    color: #000;
+}
+.home .slide-container .slide .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: .2rem solid #000;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: #000;
+    cursor: pointer;
+    background: blue;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background: #000;
+    color: #fff;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, .2);
+}
+
+.home .slide-container{
+    display: none;
+}
+.home .slide-container.active{
+    display: block;
+}
+.home #prev,.home #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5.5rem;
+    font-size: 2rem;
+    color: #000;
+    border:.2rem solid #000;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.home #prev:hover,.home #next:hover{
+    color: #fff;
+    background: blue;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, .2);
+}
+.home #prev{
+    left: 3rem;
+}
+.home #next{
+    right: 3rem;
+}
+.image:hover{
+    transform: scale(1.1);
+    transition: transform.3s ease;
+}
+    
+   
+/* description */
+.description{
+
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    padding: 20px 10px;
+}
+
+.description h2 {
+    font-size: 30px; /* Ukuran huruf judul */
+    margin-bottom: 20px; /* Jarak di atas judul */
+}
+
+.description p {
+    font-size: 16px; /* Ukuran huruf deskripsi */
+    
+}
+.description .follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.description .follow a {
+    justify-content: space-between;
+    margin: 50px;
+    align-items: center;
+    font-size: 45px;
+    color: black;
+}
+.description .follow a:hover {
+    transform: scale(1.3);
+    transition: transform.3s ease;
+}
+.product-description {
+    display: flex;
+    margin:20px;
+    justify-content: center; /* Menyusun elemen di sekitar satu sama lain */
+    align-items: center; /* Menyelaraskan gambar dan deskripsi secara vertikal */   
+    padding: 20px; /* Jarak di dalam border */
+    box-shadow: 0 2px 5px blue; /* Bayangan untuk efek kedalaman */
+    flex-wrap: wrap; /* Membuat elemen membungkus jika ruang tidak cukup */
+}
+
+.product-image {
+    max-width: 300px; /* Atur lebar maksimum gambar */
+    border: 1px solid #ddd; /* Border di sekitar gambar */
+    border-radius: 4px; /* Sudut border gambar yang melengkung */
+    flex-shrink: 0; /* Mencegah gambar mengecil */
+}
+
+.product-info {
+    max-width: 600px; /* Atur lebar maksimum untuk deskripsi */
+    flex: 1; /* Membuat deskripsi mengambil sisa ruang yang tersedia */
+    padding-left: 20px;
+}
+
+.product-info h2 {
+    margin: 0; /* Menghapus margin default pada judul */
+    color: #333; /* Warna teks judul */
+}
+
+.product-info p {
+    line-height: 1.6; /* Menambah jarak antar baris untuk keterbacaan */
+    color: #666; /* Warna teks deskripsi */
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 768px) {
+    .product-description {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+        align-items: flex-start; /* Menyelaraskan elemen ke kiri */
+    }
+
+    .product-image {
+        margin-right: 0; /* Menghapus margin kanan pada gambar */
+        margin-bottom: 20px; /* Menambahkan margin bawah pada gambar */
+        max-width: 100%; /* Membuat gambar responsif */
+    }
+
+    .product-info {
+        max-width: 100%; /* Membuat deskripsi mengambil lebar penuh */
+    }
+}
+
+
+/* end home  */
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    padding: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.heading span{
+    color: blue;
+}
+.product .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.product .box-container .box{
+    border: .1rem solid blue;
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    flex: 1 1 30rem;
+}
+.product .box-container .content{
+    padding: 1.5rem;
+}
+.product .box-container .box img{
+    height: 20rem;
+    transform: rotate(-35deg);
+    margin: 8rem 2rem;
+}
+
+.product .box-container .box:hover img{
+    transform: rotate(-35deg) scale(1.2);
+}
+.product .box-container .box .icons{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+}
+.product .box-container .box .icons a{
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: #000;
+    border: .1rem solid #000;
+    border-radius: .5rem;
+    background: #fff;
+    margin-top: .5rem;
+}
+.product .box-container .box .icons{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: .5rem;
+    left: -10rem;
+}
+.product .box-container .box:hover .icons{
+    left: 1rem;
+}
+.product .box-container .box .icons a:hover{
+    color: blue;
+    color: #fff;
+}
+.product .box-container .box .content h3{
+    color: #000;
+    font-size: 2.5rem;
+}
+.product .box-container .box .content .price{
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+.product .box-container .box .content .price span{
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+.product .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+.product .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color:blue;
+}
+/* end product  */
+.featured .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: .1rem solid blue;
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+.featured .row .content{
+    flex: 1 1 40rem;
+}
+.featured .row .image-container{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex: 1 1 50rem;
+}
+.featured .row .image-container .small-image{
+    width: 20%;
+}
+.featured .row .image-container .big-image{
+    width: 80%;
+    padding: 1rem;
+}
+.featured .row .image-container .small-image img{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+.featured .row .image-container .small-image img:hover{
+    background: #ccc;
+}
+.featured .row .image-container .big-image img{
+    width: 100%;
+}
+.featured .row .image-container .big-image img:hover{
+    transform: scale(1.05);
+}
+.featured .row .content h3{
+    font-size: 2.5rem;
+    color: #000;
+}
+.featured .row .content .stars i{
+    font-size: 1.7rem;
+    color: blue;
+    padding: .5rem 0;
+}
+.featured .row .content p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+.featured .row .content .price{
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: bolder;
+}
+.featured .row .content .price span{
+    font-size: 1.5rem;
+    color: blue;
+    text-decoration: line-through;
+}
+/* end featured  */
+.blog .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.blog .box-container .box{
+    flex: 1 1 30rem;
+    text-align: center;
+    border: .1rem solid blue;
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+}
+.blog .box-container .box img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem 0;
+    border: 4px solid #ddd;
+}
+.blog .box-container .box img:hover{
+   transform: scale(1.2);
+}
+.blog .box-container .box h3{
+    font-size: 2.5rem;
+    color: #000;
+}
+.blog .box-container .box p{
+    font-size: 1.6rem;
+    color: gray;
+    padding: 1rem 0;
+}
+.blog .box-container .box .stars i{
+    color:blue;
+    font-size: 2rem;
+}
+div.profile-sosmed a i{
+    font-size: 40px;
+    justify-content: space-around;
+    margin:30px;
+    color: black;
+}
+div.profile-sosmed a i:hover{
+    color: rgb(71, 71, 209);
+    font-weight: bold;
+    transform: scale(1.2);
+}
+/* end blog  */
+.form{
+    display: relative;
+    content: table;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px blue;
+    padding: 10px;
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+#button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 400px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-container {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto; /* Center the form horizontally */
+    }
+        
+}
+/*---footer---*/
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive  */
+@media (max-width:768px){
+    #menu-bar{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        width: 100%;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+    header .navbar a{
+        font-size: 2rem;
+        background: rgb(66, 66, 204);
+        border: .1rem solid #000;
+        border-radius: .5rem;
+        padding: 1rem;
+        margin: 1rem;
+        display: block;
+        text-align: center;
+    }
+    header .navbar.active{
+        left: 0;
+    }
+}
+

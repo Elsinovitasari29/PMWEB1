@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function warna(){
+            var warna = document.getElementById("warna").value;
+            document.body.style.backgroundColor = warna;
+        }
+        function kurse(){
+            let nilaiRupiah = 15490;
+            let dolar = document.getElementById("dolar").value;
+            let rupiah = nilaiRupiah * dolar;
+            document.getElementById("rupiah").innerHTML = rupiah;
+            let area_hasil
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    pilih warna :
+    <select name="" id="warna" onchange="warna()">
+        <option value="red">Merah</option>
+        <option value="blue">Biru</option>
+        <option value="yellow">Kuning</option>
+    </select>
+
+    Kurs Dollar ke Rupiah :
+    <input type="text" id="rupiah" value="0">
+    <input type="text" id="dolar" value="0">
+    <button onclick="kurs()">Kurs</button>
+    <p id="hasil"></p>
+</body>
+</html>

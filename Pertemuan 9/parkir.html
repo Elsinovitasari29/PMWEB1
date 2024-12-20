@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pembayaran Parkir</title>
+</head>
+<body>
+    <h3>Sistem Pembayaran Parkir</h3>
+    <span>Jam Masuk :</span><input type="time" name="" id="masuk">
+    <span>Jam Keluar :</span><input type="time" name="" id="keluar">
+    <button onclick="hitung_biaya_parkir()">Hitung!</button>
+    <p>Durasi Parkir : <span id="durasi">0</span> Jam</p>
+    <p>Biaya Parkir : <span id="biaya">0</span> Jam</p>
+
+    <script>
+        function hitung_biaya_parkir() {
+            let masuk = document.getElementById("masuk").value;
+            let keluar = document.getElementById("keluar").value;
+            let jamMasuk = Math.abs(masuk.split(":")[0]);
+            let jamKeluar = Math.abs(keluar.split(":")[0]);
+            let durasi = jamKeluar - jamMasuk;
+            console.log(jamMasuk, jamKeluar, durasi);
+
+            document.getElementById("durasi").innerHTML = durasi;
+            if (durasi <= 2) {
+                document.getElementById("biaya").innerHTML = 3000;
+            } else {
+                document.getElementById("biaya").innerHTML = durasi *1000+1000;
+            
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+
+.container{
+    display: flex;
+}
+
+.item-1{
+    height: 600px;
+    width: 200px;
+    background-color: violet;
+    border: solid;
+    
+}
+
+.item-2{
+    height: 600px;
+    width: 200px;
+    background-color:palevioletred;
+    border: solid;
+   
+}
+
+.item-3{
+    height: 600px;
+    width: 200px;
+    background-color: blueviolet;
+    border: solid;
+   
+}
+
+.item-4{
+    height: 600px;
+    width: 200px;
+    background-color: lightblue;
+    border: solid;
+   
+}
+.kotak{
+  margin: auto ;
+}

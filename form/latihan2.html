@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transaction Form</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #000;
+            
+            
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+           
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            padding: 5px;
+            text-decoration: underline;
+        }
+        .form-group {
+            margin-bottom: 15px;  
+        }
+        .form-group label {
+            display: inline-flex;
+            width: 150px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #000;   
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .description {
+            width: 300px;
+            height: 100px;
+        }
+        .form-group .upload-btn {
+            width: auto;
+            padding: 5px 10px;
+           
+        }
+        .form-group .generate-btn {
+            width: 200px;
+            padding: 10px;
+            background-color: #008000;
+            color: #fff;
+            border: 3px solid #000;
+            cursor: pointer;
+            text-shadow: 2px 2px 0px black;
+            
+        }
+        
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Generate Link</a>
+            <a href="#">Transaction History</a>
+            <a href="#">Policy</a>
+            <a href="#">Logout</a>
+        </div><br><br><br>
+    
+        <div class="form-group">
+            <img src="MacBookAir.jpeg" alt="MacBook Air"><br><br>
+            <button class="upload-btn">Upload Picture</button>
+        </div>
+    
+        <div class="form-group">
+            <label>Title Here :</label>
+            <input type="text" value="MacBook Air £800">
+        </div>
+
+        <div class="form-group">
+            <label>Description :</label>
+            <textarea class="description">Year : 2009
+Model :
+Condition : Mint</textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Account Number :</label>
+            <input type="text" value="123-456-789-0">
+        </div>
+
+        <div class="form-group">
+            <label>Bank :</label>
+            <select>
+                <option>HSBC</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Account Holder :</label>
+            <input type="text" value="Name Here">
+        </div>
+
+        <div class="form-group">
+            <label>Transaction :</label>
+            <input type="number" value="1" min="1">
+            <p>* if the transaction is for 3 person, choose 3 from the drop-down list*</p>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" checked> Send to Mobile Phone
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" checked> Send to Email
+        </div>
+
+        <div class="form-group">
+            <label>Send to Mobile Phone :</label>
+            <input type="text" value="1234567890, 1234567891">
+        </div>
+
+        <div class="form-group">
+            <label>Send to Email :</label>
+            <input type="text" value="mfmm2g13@soton.oc.uk, fys_06@yahoo.com">
+        </div>
+
+        <div class="form-group">
+            <button class="generate-btn">Generate Nabr Link</button>
+        </div>
+
+        </div>
+    </body>
+</html>

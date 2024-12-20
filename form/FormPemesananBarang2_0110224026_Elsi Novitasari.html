@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> A Web Page Pemesanan 2</title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            padding: 5px 10px;
+            text-decoration: underline;
+            
+        }
+        .content {
+            display: flex;
+        }
+        .content img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-right: 20px;
+        }
+        
+
+        .details {
+            flex: 1;
+            
+        }
+        .details div {
+            margin-bottom: 10px;
+        }
+        .details label {
+            display: flex;
+            width: 150px;
+        }
+        .details input, .details select {
+            width: calc(100% - 160px);
+            padding: 5px;
+        }
+        .details input[type="checkbox"] {
+            width: auto;
+        }
+        .details .checkbox-label {
+            display: inline-block;
+            width: auto;
+            color: green;
+        }
+        .details .button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-shadow: 2px 0px 0px #138b0b;
+        }
+  </style>
+ </head>
+
+ <body>
+
+  <div class="container">
+   <div class="nav">
+    <a href="#">| Home |</a>
+    <a href="#">| Register |</a>
+    <a href="#">| Policy |</a>
+    <a href="#">| About |</a>
+   </div><br><br><br>
+
+   <div class="content">
+    <img alt="Placeholder image"  src="MacBookAir.jpeg"/>
+    <div class="details">
+
+     <div>
+      <label>Title Here :</label><span>MacBook Air £800</span>
+     </div>
+
+     <div>
+        <label> Description :</label>
+        <textarea >Year : 2009
+Model : 
+Condition : Mint</textarea>
+     </div>
+
+     <div><label>Total Amount :</label>
+      <span>£800</span>
+     </div>
+
+     <div>
+        <label> Pay to :</label>
+        <span>123-456-789-0</span>
+     </div>
+
+     <div>
+      <label> Payment Type :</label>
+      <select>
+       <option>Visa Debit</option>
+      </select>
+     </div>
+
+     <div>
+      <label>Account Holder :</label>
+      <input type="text" value="Name Here"/>
+     </div>
+
+     <div>
+      <label>Account No :</label>
+      <input type="text" value="123-456-789-0"/>
+     </div>
+
+     <div>
+      <input checked type="checkbox"/>
+      <span class="checkbox-label">Send to Mobile Phone</span>
+     </div>
+
+     <div>
+      <input checked type="checkbox"/>
+      <span class="checkbox-label">Email me copy of transaction</span>
+     </div>
+
+     <div>
+      <label>Send to Mobile Phone :</label>
+      <input type="text" value="1234567890, 1234567891"/>
+     </div>
+
+     <div>
+      <label>Send to Email :</label>
+      <input type="email" value="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"/>
+     </div>
+
+     <div>
+      <button class="button">Pay using QuidLink</button>
+     </div>
+
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

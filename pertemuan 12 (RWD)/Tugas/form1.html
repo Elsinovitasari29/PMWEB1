@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Seminar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Seminar Rembulan #1 September 2017</h2>
+    <div class="table-responsive-sm">
+        <table class="table table-padded table-borderless">
+            <thead>
+                <tr class="table-active">
+                    <th scope="col">Registrasi Seminar/Workshop</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td scope="row">
+                        <form>
+                            <div class="form-group row">
+                              <label for="name" class="col-4 col-form-label">Nama Lengkap</label> 
+                              <div class="col-8">
+                                <input id="name" name="name" type="text" required="required" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="place" class="col-4 col-form-label">Tempat lahir</label> 
+                              <div class="col-8">
+                                <input id="place" name="place" type="text" required="required" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="date" class="col-4 col-form-label">Tanggal, Lahir</label> 
+                              <div class="col-8">
+                                <div class="input-group">
+                                  <input id="date" name="date" type="text" class="form-control" value="12 May 2016"> 
+                                  <div class="input-group-append">
+                                    <div class="input-group-text">
+                                      <i class="fa fa-calendar"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-4">Gender</label> 
+                              <div class="col-8">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input name="gender" id="gender_0" type="radio" required="required" class="custom-control-input" value="laki-laki" checked> 
+                                  <label for="gender_0" class="custom-control-label" >Laki-Laki</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input name="gender" id="gender_1" type="radio" required="required" class="custom-control-input" value="perempuan"> 
+                                  <label for="gender_1" class="custom-control-label">Perempuan</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="email" class="col-4 col-form-label">Email</label> 
+                              <div class="col-8">
+                                <input id="email" name="email" type="text" required="required" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="status" class="col-4 col-form-label">Status Peserta</label> 
+                              <div class="col-8">
+                                <select id="status" name="status" class="custom-select">
+                                  <option value="status">Select</option>
+                                  <option value="mahasisiwa">Mahasiswa</option>
+                                  <option value="dosen">Dosen</option>
+                                  <option value="lainnya">Lainnya</option>
+                                </select>
+                              </div>
+                            </div> 
+                            <div class="form-group row">
+                              <div class="offset-4 col-8">
+                                <button name="submit" type="submit" class="btn btn-grimary">Daftar</button>
+                              </div>
+                            </div>
+                          </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

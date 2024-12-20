@@ -1,0 +1,150 @@
+body {
+    
+    font-family: Arial, sans-serif; 
+}
+header {
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+img {
+    width: 100px;
+    height: 70px;
+    
+}
+ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    
+    justify-content: flex-end;
+}
+li { 
+    margin-right: 50px;    
+}   
+a {
+    color: black;
+    text-decoration: none;
+    padding: 20px 30px;
+    transition: 0.3s;
+    
+    
+}
+a:hover {
+    color: black;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px gray;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    font-size: 20px;
+}
+.login-dropdown {
+    position: relative;
+}
+  
+.login-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.login-dropdown:hover .dropdown-content {
+    display: block;
+}
+.login-dropdown .dropdown-content form {
+    padding: 10px;
+}
+.login-dropdown .dropdown-content form input
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-dropdown .dropdown-content form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-dropdown .dropdown-content form button:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2), 0px -2px 2px rgba(0,0,0,0.2);
+}
+
+.login-dropdown .dropdown-content {
+    display: none;
+}
+
+.banner {
+   background-image: url(assets/banner.jpg);
+   background-size: cover;
+   height: 100vh;
+   border-radius: 10px;
+}
+.banner h1 {
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    padding-top: 400PX;
+}
+div.clips { 
+    background-size: 100%;
+    box-shadow: 10px 10px 10px gray;
+    animation: slider 9s infinite linear;
+    height: 45vh;
+    width: 45vh;
+    border-radius: 10%;
+    
+}
+@keyframes slider {
+    0%{
+        background-image: url(https://down-id.img.susercontent.com/file/id-11134207-7r98s-lp3f8llgmqfhe4);
+    }
+    20%{
+        background-image: url(https://down-id.img.susercontent.com/file/id-11134207-7qul5-ljwlcrtqpty00a);
+    }
+    40%{
+        background-image: url(https://images.tokopedia.net/img/cache/700/VqbcmM/2023/3/7/1abd04f3-e85a-434e-82de-2ec36e34bf81.jpg);
+    }
+    60%{
+        background-image: url(https://images.tokopedia.net/img/cache/700/VqbcmM/2023/2/19/957292db-09db-45ba-a3cc-7beea28748c7.jpg);
+    }
+    80%{
+        background-image: url(https://images.tokopedia.net/img/cache/700/VqbcmM/2023/3/7/26c37ffb-e4e7-4846-805c-81323759ccf9.jpg);
+
+    }
+    100%{
+        background-image: url(https://down-id.img.susercontent.com/file/sg-11134201-23010-nwo85i740imvf0);
+    }
+}
+
+
+.tentang {
+    display:flex;
+    justify-content: space-between;
+   
+   
+}
+.deskripsi{
+   
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px gray;
+    text-align: justify;
+}

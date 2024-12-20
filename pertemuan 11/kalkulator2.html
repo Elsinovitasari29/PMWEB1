@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Aritmatika</title>
+    <script>
+        function hitung() {
+            let strBil1 = document.getElementById("bil1").value; //ambil nilai id=bil1
+            let strBil2 = document.getElementById("bil2").value; //ambil nilai id=bil2
+            let operator = document.getElementById("operator").value; //ambil nilai id=operator
+
+            let bil1 = parseFloat(strBil1); //konversi string ke angka
+            let bil2 = parseFloat(strBil2);
+            let hasil; //variabel hasil
+
+            switch (operator) {
+                case "+" :
+                    hasil = bil1 + bil2; //Perjumlahan
+                    break;
+                case "-":
+                    hasil = bil1 - bil2; //Pengurangan
+                    break;
+                case "*":
+                    hasil = bil1 * bil2; //Perkalian
+                    break;
+                case "/":
+                    hasil = bil1 / bil2; //Pembagian
+                    break;
+                default:
+                hasil = "Operator tidak valid"; //Memvalidasi operator
+            }
+            document.getElementById("hasil").innerHTML = hasil; //cetak hasil
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 15%;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        form {
+
+            width: fit-content;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: lightblue;
+        }
+        input{
+            width: 100px;
+            padding: 10px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator Aritmatika</h2>
+    <form action="">
+        bilangan 1 : <input type="text" name="" id="bil1">
+        <br>
+        bilangan 2 : <input type="text" name="" id="bil2">
+        <br>
+        operator : 
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <input type="button" value="Hitung" onclick="hitung()"><br>
+        Hasil Operasi : <span id="hasil"></span>
+    </form>
+</body>
+</html>
